@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 5000 2916"
+   style="enable-background:new 0 0 5000 2916;"
+   xml:space="preserve"
+   sodipodi:docname="background_r.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs7" /><sodipodi:namedview
+   id="namedview7"
+   pagecolor="#ffffff"
+   bordercolor="#999999"
+   borderopacity="1"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.2428"
+   inkscape:cx="2500"
+   inkscape:cy="1460.0494"
+   inkscape:window-width="1920"
+   inkscape:window-height="984"
+   inkscape:window-x="26"
+   inkscape:window-y="23"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_1" />
+<g
+   id="g7"
+   transform="matrix(-1,0,0,1,5000,0)"
+   inkscape:export-filename="background_r.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+	<rect
+   x="0"
+   style="clip-rule:evenodd;fill:#e6e6e6;fill-rule:evenodd"
+   width="5000"
+   height="2916"
+   id="rect1"
+   y="0" />
+	<defs
+   id="defs1">
+		<filter
+   id="Adobe_OpacityMaskFilter"
+   filterUnits="userSpaceOnUse"
+   x="0"
+   y="719.12402"
+   width="5000"
+   height="2196.876">
+			<feColorMatrix
+   type="matrix"
+   values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+   id="feColorMatrix1" />
+		</filter>
+	</defs>
+	<mask
+   maskUnits="userSpaceOnUse"
+   x="0"
+   y="719.124"
+   width="5000"
+   height="2196.876"
+   id="SVGID_1_">
+		<g
+   style="filter:url(#Adobe_OpacityMaskFilter)"
+   id="g2">
+			
+				<linearGradient
+   id="SVGID_00000093139468690066813590000017877390998503658663_"
+   gradientUnits="userSpaceOnUse"
+   x1="7088.1069"
+   y1="2520.6438"
+   x2="-2958.447"
+   y2="3447.5081"
+   gradientTransform="translate(2488.7517,-1355.9716)">
+				<stop
+   offset="0"
+   style="stop-color:#FFFFFF"
+   id="stop1" />
+				<stop
+   offset="1"
+   style="stop-color:#000000"
+   id="stop2" />
+			</linearGradient>
+			
+				<rect
+   x="0"
+   y="719.12299"
+   style="fill:url(#SVGID_00000093139468690066813590000017877390998503658663_)"
+   width="5000"
+   height="2196.877"
+   id="rect2" />
+		</g>
+	</mask>
+	<path
+   style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd"
+   d="M 1574,1581.387 C 1714,2630.304 0,2916 0,2916 H 5000 V 1140.638 C 3804.652,1908.021 1298.571,-482.196 1574,1581.387"
+   mask="url(#SVGID_1_)"
+   id="path2" />
+	<defs
+   id="defs2">
+		
+			<filter
+   id="Adobe_OpacityMaskFilter_00000056415669802057504620000010974458225878732954_"
+   filterUnits="userSpaceOnUse"
+   x="0"
+   y="540.68799"
+   width="5000"
+   height="2375.313">
+			<feColorMatrix
+   type="matrix"
+   values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+   id="feColorMatrix2" />
+		</filter>
+	</defs>
+	
+		<mask
+   maskUnits="userSpaceOnUse"
+   x="0"
+   y="540.688"
+   width="5000"
+   height="2375.313"
+   id="SVGID_00000100376080310245189650000001586344968537627823_">
+		<g
+   style="filter:url(#Adobe_OpacityMaskFilter_00000056415669802057504620000010974458225878732954_)"
+   id="g4">
+			
+				<linearGradient
+   id="SVGID_00000058565753137227757680000016288729967413253249_"
+   gradientUnits="userSpaceOnUse"
+   x1="7096.7783"
+   y1="2479.6814"
+   x2="-2962.1062"
+   y2="3338.04"
+   gradientTransform="translate(2488.7517,-1355.9716)">
+				<stop
+   offset="0"
+   style="stop-color:#FFFFFF"
+   id="stop3" />
+				<stop
+   offset="1"
+   style="stop-color:#000000"
+   id="stop4" />
+			</linearGradient>
+			
+				<rect
+   x="0"
+   y="540.68402"
+   style="fill:url(#SVGID_00000058565753137227757680000016288729967413253249_)"
+   width="5000"
+   height="2375.3159"
+   id="rect4" />
+		</g>
+	</mask>
+	
+		<path
+   style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd"
+   d="M 1368.998,1691.458 C 1363.001,2758.181 979.363,2337.554 704,2419.87 328.072,2532.253 0,2916 0,2916 H 5000 V 1020.663 C 3775.009,1839.906 1383.666,-915.653 1368.998,1691.458"
+   mask="url(#SVGID_00000100376080310245189650000001586344968537627823_)"
+   id="path4" />
+	<defs
+   id="defs4">
+		
+			<filter
+   id="Adobe_OpacityMaskFilter_00000021833751161083067210000012373947910953325752_"
+   filterUnits="userSpaceOnUse"
+   x="1442.323"
+   y="1838.562"
+   width="3557.677"
+   height="1077.438">
+			<feColorMatrix
+   type="matrix"
+   values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+   id="feColorMatrix4" />
+		</filter>
+	</defs>
+	
+		<mask
+   maskUnits="userSpaceOnUse"
+   x="1442.323"
+   y="1838.562"
+   width="3557.677"
+   height="1077.438"
+   id="SVGID_00000072977919876317498430000004967668839908666241_">
+		<g
+   style="filter:url(#Adobe_OpacityMaskFilter_00000021833751161083067210000012373947910953325752_)"
+   id="g6">
+			
+				<linearGradient
+   id="SVGID_00000002365693595252892640000013872254652730177188_"
+   gradientUnits="userSpaceOnUse"
+   x1="3207.4177"
+   y1="3573.1409"
+   x2="-213.0778"
+   y2="3781.98"
+   gradientTransform="translate(2636.135,-1355.9716)">
+				<stop
+   offset="0"
+   style="stop-color:#FFFFFF"
+   id="stop5" />
+				<stop
+   offset="1"
+   style="stop-color:#000000"
+   id="stop6" />
+			</linearGradient>
+			
+				<rect
+   x="1442.323"
+   y="1838.5601"
+   style="fill:url(#SVGID_00000002365693595252892640000013872254652730177188_)"
+   width="3557.679"
+   height="1077.4399"
+   id="rect6" />
+		</g>
+	</mask>
+	
+		<path
+   style="clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd"
+   d="M 3654,2070.23 C 2821.998,2769.511 2842.001,2478.144 2469.999,1953.687 2097.999,1429.229 1442.323,2916 1442.323,2916 H 5000 v -438.327 c 0,0 -514,-1106.72 -1346,-407.443"
+   mask="url(#SVGID_00000072977919876317498430000004967668839908666241_)"
+   id="path6" />
+</g>
+</svg>

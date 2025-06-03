@@ -661,10 +661,86 @@
 
         <div class="slide-body">
 
-            <!-- 
-            ...
-            ...
-            -->
+            <p style="text-align: left;">
+                $1$. <b>PINN</b>s parameters and training details:
+            </p>
+            <!-- <ul>
+                <li>$4$ hidden layers with $50$ neurons each</li>
+                <li>activation function: $\tanh()$ in hidden, linear in output</li>
+                <li>Adam optimizer with learning rate $10^{-2}$</li> 
+                <li>$10^5$ training epochs</li>
+            </ul> -->
+
+            <div class="multicolumn">
+
+                <div class="cbox" style="margin: 0px 10px 0px 10px; font-size: 0.9em;">
+                    <b>Network Structure</b>:<br>
+                    $4$ hidden layers<br>
+                    $50$ neurons each<br>
+                </div>
+
+                <div class="cbox" style="margin: 0px 10px 0px 10px; font-size: 0.9em;">
+                    <b>Activations</b>:<br>
+                    $\tanh()$ in hidden<br>
+                    $\text{linear}$ in output
+                </div>
+
+                <div class="cbox" style="margin: 0px 10px 0px 10px; font-size: 0.9em;">
+                    <b>Optimizer</b>: ADAM<br>
+                    learning rate $10^{-2}$<br>
+                    $10^5$ training epochs
+                </div>
+
+                <div class="cbox" style="margin: 0px 10px 0px 10px; font-size: 0.8em;">
+                    <b>Loss Weights</b>:<br>
+                    $\alpha \in \{0.001, 0.01, 0.1,$<br>
+                        $0.5, 0.9, 0.99, 0.999\}$
+                </div>
+
+            </div>
+
+            <p style="text-align: left;">
+                $2$. Training datasets sizes:
+                <ul>
+                    <li><b>Diffusion</b>: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $N_{\mathcal{D}} = 384$ boundary points, $N_{\mathcal{F}} = 1024$ collocation points</li>
+                    <li><b>Navier-Stokes</b>: &nbsp; $N_{\mathcal{D}} = 512$ boundary points, $N_{\mathcal{F}} = 1024$ collocation points</li>
+                </ul>
+            </p>
+            <p style="text-align: left; margin-top: -20px;">
+                $3$. <b>Evaluation metric</b>: <i>relative $\ell_2$ error</i> on <b>independent test set</b> of $N_{\mathcal{T}} = 1024$ points:
+            </p>
+            <div class="cbox" style="padding-top: 0px; padding-bottom: 0px;">
+                \[
+                    \varepsilon_u = \frac{||u - u_{\theta}||_2}{||u||_2}
+                    \tag{23}
+                \]
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Diffusion Weights Optimization Results -->
+    <section data-transition="slide">
+       <h1 class="slide-title">Diffusion Example Results</h1> 
+
+        <div class="slide-body">
+
+            <div class="cbox" style="background-color: white; padding: 10px; height: 90%; text-align: center;">
+                <img src="./images/diffusion-pinn.svg" alt="Diffusion Example Results" style="width: 100%; margin: 0 auto;">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Navier-Stokes Weights Optimization Results -->
+    <section data-transition="slide">
+       <h1 class="slide-title">Navier-Stokes Example Results</h1> 
+
+        <div class="slide-body">
+
+            <div class="cbox" style="background-color: white; padding: 10px; height: 90%; text-align: center;">
+                <img src="./images/navier-pinn.svg" alt="Diffusion Example Results" style="width: 100%; margin: 0 auto;">
+            </div>
 
         </div>
     </section>

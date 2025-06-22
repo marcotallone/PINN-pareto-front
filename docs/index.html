@@ -319,17 +319,34 @@
        <h1 class="slide-title">Apparent Pareto Front</h1> 
 
         <div class="slide-body">
+
+            <div class="multicolumn">
+
+                <div style="flex: 2;">
+
+                    <div class="cbox">
+                        <b>Pareto Front</b>: set of all possible <b>Pareto optimal solutions</b> attained by continuous adjustment of loss weights $\alpha$
+                    </div>
+                    <p>
+                        Gradient descent converges to <b>local optima</b> $\Rightarrow$ <b>approximations of Pareto optimal solutions</b> 
+                    </p>
+                    <p>$\downarrow$</p>
+
+                </div>
+
+                <div style="flex: 1;">
+
+                    <img src="./images/Pareto-optimal-solutions.png" alt="Pareto Optimal Solutions" style="width: 90%; box-shadow: 4px 5px 10px rgba(134,142,176,1);">
+
+                </div>
+
+            </div>
+
+
+                    <div class="cbox">
+                        <b>Apparent Pareto Front</b>: set of all (<i>sub-optimal</i>) loss values achievable with gradient based optimization for different values of $\alpha$<br>
+                    </div>
                 
-            <div class="cbox">
-                <b>Pareto Front</b>: set of all possible <b>Pareto optimal solutions</b> attained by continuous adjustment of loss weights $\alpha$
-            </div>
-            <p>
-                Gradient descent converges to <b>local optima</b> $\Rightarrow$ <b>approximations of Pareto optimal solutions</b> 
-            </p>
-            <p>$\downarrow$</p>
-            <div class="cbox">
-                <b>Apparent Pareto Front</b>: set of all (<i>sub-optimal</i>) loss values achievable with gradient based optimization for different values of $\alpha$<br>
-            </div>
 
         </div>
 
@@ -407,6 +424,61 @@
             <img src="./images/diffusion-solution.svg" alt="Diffusion Example Solution" style="height: 90%; ">
         </div>
     </section>
+    <section data-transition="slide">
+       <h1 class="slide-title">Diffusion Example</h1> 
+
+        <div class="slide-body">
+        
+
+            <div class="multicolumn">
+
+                <div style="flex: 1;">
+                    <p> <span style="color: var(--accent)"><b>Data Loss Function</b></span> </p>
+                    <div class="cbox" 
+                         style="border: 2px solid transparent; 
+                                width: 100%;
+                                padding: 5px;
+                                background-image: linear-gradient(#f1f1f1, #f1f1f1), linear-gradient(45deg, #0adfbb, var(--accent)); 
+                                background-origin: border-box; 
+                                background-clip: padding-box, border-box;">
+                        \[
+                        \mathcal{L}_{\mathcal{D}}(\theta) = \frac{1}{N_{\mathcal{D}}} 
+                        \sum_{i=1}^{N_{\mathcal{D}}} |u_\theta(t_i, x_i) - u(t_i, x_i)|^2
+                        \]
+                    </div>
+                    <p style="text-align: center;">
+                        on IC and BC Dataset ✖️: $\{(t_i, x_i), u(t_i, x_i)\}_{i=1}^{N_{\mathcal{D}}}$
+                    </p>
+                </div>
+
+                <div style="flex: 1; padding-left: 30px;">
+                    <p> <span style="color: var(--accent2)"><b>Physics Loss Function</b></span> </p>
+                    <div class="cbox" 
+                         style="border: 2px solid transparent; 
+                                width: 100%;
+                                padding: 5px;
+                                background-image: linear-gradient(#f1f1f1, #f1f1f1), linear-gradient(45deg, var(--accent2), orange); 
+                                background-origin: border-box; 
+                                background-clip: padding-box, border-box;">
+                        \[
+                        \mathcal{L}_{\mathcal{F}}(\theta) = \frac{1}{N_{\mathcal{F}}} 
+                        \sum_{i=1}^{N_{\mathcal{F}}} \left| \frac{\partial u_\theta(t_i, x_i)}{\partial t} - \kappa \frac{\partial^2 u_\theta(t_i, x_i)}{\partial x^2} \right|^2
+                        \]
+                    </div>
+                    <p style="text-align: center;">
+                        on Collocation Dataset ⚪: $\{(t_i, x_i)\}_{i=1}^{N_{\mathcal{F}}}$
+                    </p>
+                </div>
+
+            </div>
+
+            <p>
+                $\Rightarrow$ changing $\kappa$ and $L$, we can study how different system<br> parameterizations affect <span style="color: var(--accent)">data loss</span> and <span style="color: var(--accent2)">physics loss</span> terms
+            </p>
+
+        </div>
+
+    </section>
 
     <!-- Navier-Stokes Example -->
     <section data-transition="slide">
@@ -420,7 +492,7 @@
                     \tag{11a}
                     \]
                     \[
-                    \nabla \cdot \mathbf{u} = 0 \quad \text{(continuity equation)}
+                    \nabla \cdot \mathbf{u} = 0 \quad \text{(continuity equation)}^{\textcolor{red}{*}}
                     \tag{11b}
                     \]
             </div>
@@ -441,6 +513,9 @@
                 </ul>
                 </div>
             </div>
+            <p style="text-align: left;">
+                $^{\textcolor{red}{*}}$ <span style="color: red;">can be directly hard coded in PINNs</span> 
+            </p>
         </div>
     </section>
     <section data-transition="slide">
@@ -497,29 +572,88 @@
                 <div style="flex: 1;">
                     <p style="text-align: left;">
                         Other assumptions:
-                    <ul>
+                    <ul style="font-size: 1em;">
                         <li>fixed Reynolds number: $\text{Re} = \frac{u_0 L}{\nu}$</li>
                         <li>$u_0=\frac{1}{L}$ $\Rightarrow$ same flow for any grid size $L$</li>
-                        <li>fixed grid $x \in [0, L], y \in [0, L]$</li>
+                        <li>fixed grid $x \in [-L, L], y \in [-L, L]$</li>
                     </ul>
                     </p>
 
-                    <div class="cbox" style="margin-bottom: 30px; font-size: 0.9em;">
+                    <!-- <div class="cbox" style="margin-bottom: 30px; font-size: 0.9em;">
                         <b>BC</b>: PINN trained on boundary data sampled from analytical solutions $(12)$
-                    </div>
+                    </div> -->
                     <div class="cbox" style="font-size: 0.9em;">
-                        <b>IC</b>: <b>flow is steady state</b> $\Rightarrow$ no initial condition
+                        ⚠️ <b>Note</b>:<br> <b>flow is steady state</b><br>$\Rightarrow$ no initial conditions (IC)
                     </div>
                 </div>
 
 
-                <div style="flex: 1.2;">
-                    <img src="./images/navier-solution.svg" alt="Navier-Stokes Example Solution" style="height: 100%; ">
+                <div style="flex: 1.5;">
+                    <img src="./images/navier-solution.svg" alt="Navier-Stokes Example Solution" style="width: 80%; ">
                 </div>
 
             </div>
             
         </div>
+    </section>
+    <section data-transition="slide">
+       <h1 class="slide-title">Navier-Stokes Example</h1>
+
+        <div class="slide-body">
+        
+
+            <div class="multicolumn">
+
+                <div style="flex: 1;">
+                    <p> <span style="color: var(--accent)"><b>Data Loss Function</b></span> </p>
+                    <div class="cbox" 
+                         style="border: 2px solid transparent; 
+                                width: 100%;
+                                padding: 5px;
+                                background-image: linear-gradient(#f1f1f1, #f1f1f1), linear-gradient(45deg, #0adfbb, var(--accent)); 
+                                background-origin: border-box; 
+                                background-clip: padding-box, border-box;">
+                        \[
+                        \mathcal{L}_{\mathcal{D}}(\theta) = \frac{1}{N_{\mathcal{D}}} 
+                        \sum_{i=1}^{N_{\mathcal{D}}} |\mathbf{u}_\theta(t_i, x_i) - \mathbf{u}(t_i, x_i)|^2
+                        \]
+                    </div>
+                    <p style="text-align: center;">
+                        on BC Dataset ✖️: $\{(t_i, x_i), \mathbf{u}(t_i, x_i)\}_{i=1}^{N_{\mathcal{D}}}$
+                    </p>
+                </div>
+
+                <div style="flex: 1; padding-left: 30px;">
+                    <p> <span style="color: var(--accent2)"><b>Physics Loss Function</b></span> </p>
+                    <div class="cbox" 
+                         style="border: 2px solid transparent; 
+                                width: 100%;
+                                padding: 5px;
+                                background-image: linear-gradient(#f1f1f1, #f1f1f1), linear-gradient(45deg, var(--accent2), orange); 
+                                background-origin: border-box; 
+                                background-clip: padding-box, border-box;">
+                        \[
+                        \mathcal{L}_{\mathcal{F}}(\theta) = \frac{1}{N_{\mathcal{F}}} 
+                        \sum_{i=1}^{N_{\mathcal{F}}} \left| (\mathbf{u}_{\theta, i} \cdot \nabla) \mathbf{u}_{\theta, i} + \frac{1}{\rho} \nabla p_{\theta, i} - \nu \nabla^2 \mathbf{u}_{\theta, i} \right|^2
+                        \]
+                    </div>
+                    <p style="text-align: center;">
+                        on Collocation Dataset ⚪:<br> $\{(t_i, x_i)\}_{i=1}^{N_{\mathcal{F}}}$
+                    </p>
+                </div>
+
+            </div>
+
+            <p>
+                $\Rightarrow$ changing $L$ we study how different parameterizations affect <span style="color: var(--accent)">data loss</span> and <span style="color: var(--accent2)">physics loss</span> 
+            </p>
+
+            <div class="cbox" style="font-size: 0.9em;">
+                ⚠️ <b>Note</b>: <b>pressure</b> is entirely learned by the PINN and <b>inferred from physics residuals only</b> 
+            </div>
+
+        </div>
+
     </section>
 
 
@@ -753,6 +887,9 @@
 
             <div class="cbox" style="background-color: white; padding: 10px; height: 90%; text-align: center;">
                 <img src="./images/diffusion-pinn.svg" alt="Diffusion Example Results" style="width: 100%; margin: 0 auto;">
+                $\frac{\kappa}{L^2} \ll 1$ data predominant
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                $\frac{\kappa}{L^2} \gg 1$ physics predominant
             </div>
 
         </div>
@@ -766,7 +903,32 @@
 
             <div class="cbox" style="background-color: white; padding: 10px; height: 90%; text-align: center;">
                 <img src="./images/navier-pinn.svg" alt="Diffusion Example Results" style="width: 100%; margin: 0 auto;">
+                $\frac{1}{L^2} \ll 1$ data predominant
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                $\frac{1}{L^2} \gg 1$ physics predominant
             </div>
+
+        </div>
+    </section>
+
+    <section data-transition="slide">
+       <h1 class="slide-title">Conclusions and Practical Implications</h1> 
+
+        <div class="slide-body">
+
+            <p style="text-align: left;">
+                The results of this paper:
+            </p>
+            <ul class="list">
+                <li>
+                    highlight <b>potential causes for optimization failures</b> arising from <b>data and physics residuals scaling</b>
+                </li>
+                <li>
+                improve PINN training and final performance in solving PDEs
+                <li>
+                    can help finding better criterias for selection of <b>optimal choice of loss weights</b> $\alpha$<br>
+                </li>
+            </ul>
 
         </div>
     </section>

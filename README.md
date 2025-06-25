@@ -10,8 +10,8 @@ Click on the badges below to access the official paper and the presentation slid
 
 <div align="center">
 
-[![Official Paper][paper-shield]][paper-url]
-[![Presentation][presentation-shield]][presentation-url]
+[![Official Paper][paper-shield]][paper-url]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[![Presentation Slides][presentation-shield]][presentation-url]
 
 </div>
 
@@ -19,4 +19,4 @@ Click on the badges below to access the official paper and the presentation slid
 [paper-url]: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10210413
 
 [presentation-shield]: https://img.shields.io/badge/Presentation-dodgerblue?style=for-the-badge&logo=google-slides&logoColor=white
-[presentation-url]: 
+[presentation-url]: https://marcotallone.github.io/PINN-pareto-front/
